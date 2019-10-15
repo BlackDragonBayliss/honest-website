@@ -6,11 +6,17 @@ import { AppComponent } from './app.component';
 import { BodyComponent } from './body/body.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { NavbarComponent } from './navbar/navbar.component';
+import { AboutComponent } from './about/about.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BodyComponent
+    BodyComponent,
+    NavbarComponent,
+    AboutComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
