@@ -1,0 +1,119 @@
+// .contact_form   {
+//     background:linear-gradient(to bottom,#472F85,#3C8CA3);
+//     color: white;
+// }
+.contact {
+    background:linear-gradient(to bottom,#472F85,#3C8CA3);
+    // color: white;
+    margin-top: 40px;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    
+    .contact_text_container{
+        .contact_header {
+            color: white;
+            font-style: italic;
+            font-size: 40px;
+            text-align: center;
+        }
+        .contact_message{
+            // font-style: italic;
+            color: white;
+            padding-top: 3%;
+            padding-left: 3%;
+            font-size: 20px;
+            text-align: center;
+        }
+    }
+   
+    .button {
+        width: 50%;
+    }
+    .textarea{
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+    .contact_form {
+        padding-left: 5%;
+        padding-top:  1%;
+    }
+}
+/* form starting stylings ------------------------------- */
+.group        { 
+    position:relative; 
+    margin-bottom:30px; 
+  }
+  input         {
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width: 50%;
+    border:none;
+    border-bottom:1px solid #757575;
+  }
+  input:focus     { outline:none; }
+
+  /* LABEL ======================================= */
+label          {
+    color:#999; 
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all; 
+  }
+  
+  /* active state */
+  input:focus ~ label, input:valid ~ label     {
+    top:-20px;
+    font-size:14px;
+    color:#3C8CA3;
+  }
+
+  /* BOTTOM BARS ================================= */
+.bar  { position:relative; display:block; width:300px; }
+.bar:before, .bar:after   {
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#5264AE; 
+  transition:0.2s ease all; 
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+    position:absolute;
+    height:60%; 
+    width:100px; 
+    top:25%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+  }
+  
+  /* active state */
+  input:focus ~ .highlight {
+    animation:inputHighlighter 0.3s ease;
+  }
+  
+  /* ANIMATIONS ================ */
+  @keyframes inputHighlighter {
+    from  { background:#5264AE; }
+    to    { width:0; background:transparent; }
+  }

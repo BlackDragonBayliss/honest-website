@@ -1,0 +1,36 @@
+
+
+<div class="contact">
+<div class="contact_text_container" fxFlex="0%">
+    <div class="contact_header">Contact Us</div>
+
+    <div class="contact_message">Got a question? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</div>
+
+</div>
+<div class="contact_form" fxFlex="60%">
+    <form (ngSubmit)="processForm()">
+        <div class="group">      
+            <input type="text" name="name" required [(ngModel)]="name">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Name</label>
+            <!-- <input type="text" name="name" class="input" placeholder="Your Name" [(ngModel)]="name"> -->
+        </div>
+        
+        <div class="group">      
+            <input type="text" name="email" required [(ngModel)]="email">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Email address</label>
+            <!-- <input type="email" name="email" class="input" placeholder="Your Email" [(ngModel)]="email"> -->
+        </div>
+
+        <!-- message -->
+        <div class="field">
+            <textarea class="textarea" name="message" placeholder="Message" [(ngModel)]="message"></textarea>
+        </div>
+
+        <button type="submit" class="button btn btn-light">Submit</button>
+    </form>
+    </div>
+</div>
