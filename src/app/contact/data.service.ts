@@ -3,11 +3,12 @@ import { HttpClient, HttpHeaders,HttpErrorResponse } from '@angular/common/http'
 import { postData, respData} from './postdataObj';
 import {Observable, throwError, of} from 'rxjs';
 import { catchError } from 'rxjs/operators';
+
 @Injectable()
 export class DataService {
   //baseUrl:string = "https://jobs.github.com/positions.json?description=angular&location=new+york";
   baseUrl:string = "http://jobs.github.com/positions.json?description=python&location=new+york";
-  postUrl: string = "https://jsonplaceholder.typicode.com/posts";
+  postUrl: string = "http://localhost:3000/api/brokerage";
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type':  'application/json',

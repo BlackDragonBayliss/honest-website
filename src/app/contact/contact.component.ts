@@ -1,24 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { EmailValidator } from '@angular/forms';
+import { postData, respData} from './postdataObj';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-
-class postData {
-  name: string;
-  email: string;
-  message: number;
-}
-
-interface respData {
-  title: string;
-  body: string;
-  userId: number;
-  id: number;
-}
 
 export class ContactComponent implements OnInit {
   name: string;
@@ -39,13 +28,14 @@ export class ContactComponent implements OnInit {
    * Only alerting for now
    */
   processForm() {
-    const allInfo = `My name is ${this.name}. My email is ${this.email}. My message is ${this.message}`;
+    const allInfo = `Thank you very much for contacting us!`;
     alert(allInfo); 
-    sendData(this.name, this.email, this.message)
+    this.sendData(this.name, this.email, this.message)
   }
 
   sendData(name: string, email: string, message: string) {
     this.posData = new postData();
+    this.posData.request_type = "emailContact";
     this.posData.name = name;
     this.posData.email = email;
     this.posData.message = message;
